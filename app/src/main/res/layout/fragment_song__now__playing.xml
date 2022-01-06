@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_color"
+    tools:context=".Song_Now_Playing">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/songImageSNP"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:src="@drawable/icon_song_default"
+        app:shapeAppearanceOverlay="@style/Widget.AppCompat.Button.Borderless" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/nextBtnSNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:icon="@drawable/icon_next"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/main_color"
+        android:layout_centerVertical="true"
+        app:iconSize="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/playPauseBtnSNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/icon_play"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/main_color"
+        android:layout_centerVertical="true"
+        app:iconSize="40dp"
+        android:layout_toStartOf="@+id/nextBtnSNP"
+        tools:ignore="UnusedAttribute"
+        android:layout_marginHorizontal="5dp"
+        android:layout_toLeftOf="@+id/nextBtnSNP" />
+
+    <TextView
+        android:id="@+id/songNameSNP"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toStartOf="@+id/playPauseBtnSNP"
+        android:layout_toLeftOf="@+id/playPauseBtnSNP"
+        android:layout_toEndOf="@+id/songImageSNP"
+        android:layout_toRightOf="@+id/songImageSNP"
+        android:gravity="center"
+        android:text="@string/songTitle"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"/>
+
+
+
+</RelativeLayout>

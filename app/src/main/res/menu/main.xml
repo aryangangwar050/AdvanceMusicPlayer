@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+
+    <item
+        android:id="@+id/navplaylist"
+        android:title="@string/playlist"
+        android:icon="@drawable/icon_playlist"
+        app:showAsAction="ifRoom"
+
+        />
+    <item
+        android:id="@+id/navfavourite"
+        android:title="@string/favourite"
+        android:icon="@drawable/icon_favourite"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/navSearch"
+        android:title="@string/search_view"
+        android:icon="@drawable/icon_search"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        />
+    <item
+        android:id="@+id/navAdd"
+        android:title="@string/add_song"
+        android:icon="@drawable/icon_add"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/navRemove"
+        android:title="@string/remove_songs_android_icon"
+        android:icon="@drawable/icon_remove"
+        app:showAsAction="ifRoom"
+        />
+
+
+
+
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rockmusic">
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.splash_Screen"
+        tools:ignore="AllowBackup,UnusedAttribute">
+        <activity
+            android:name=".SelectionActivity"
+            android:exported="false"
+            android:parentActivityName=".playlistDetails"
+            android:label="Select Songs"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".playlistDetails"
+            android:exported="false"
+            android:label="Songs"
+            android:parentActivityName=".PlaylistActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".MusicPlayerActivity"
+            android:exported="false"
+            android:label="😃😃😃😃"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".PlaylistActivity"
+            android:exported="false"
+            android:label="@string/playlist"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".FavActivity"
+            android:exported="false"
+            android:label="@string/favoutrite"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MusicService" />
+
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true" />
+    </application>
+
+</manifest>

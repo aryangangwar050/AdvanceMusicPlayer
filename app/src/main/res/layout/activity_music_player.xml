@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background_music_player"
+    tools:context=".MusicPlayerActivity">
+
+    <TextView
+        android:id="@+id/mpaSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/songTitle"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:fadingEdge="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="60dp"
+        android:textStyle="bold"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/mpaSongImage"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:src="@drawable/music"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        app:civ_shadow="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        >
+        <TextView
+            android:id="@+id/mpaSongStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="50dp"
+                android:text="@string/startTime"/>
+
+        <TextView
+            android:id="@+id/mpaSongEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="170dp"
+            android:text="@string/endtime" />
+
+    </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/mpaSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_gravity="center"
+            />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="50dp"
+        >
+        <ImageButton
+            android:id="@+id/mpaRepeatSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_repeat_24"
+            tools:ignore="UseAppTint" />
+
+        <ImageButton
+            android:id="@+id/mpaPrevSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:layout_weight="2"
+            android:paddingVertical="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_previous"
+            tools:ignore="UseAppTint" />
+        <ImageButton
+            android:id="@+id/mpaPlayPauseBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tint="@color/white"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_pause"
+            tools:ignore="UseAppTint" />
+        <ImageButton
+            android:id="@+id/mpaNextSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:layout_weight="2"
+            android:tint="@color/black"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_next"
+            tools:ignore="UseAppTint" />
+        <ImageButton
+            android:id="@+id/mpaOptionsSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_options"
+            android:gravity="right"
+            tools:ignore="UseAppTint" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

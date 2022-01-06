@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/feedback"
+        android:title="@string/feedback"
+        android:icon="@drawable/icon_feedback"
+        android:visible="true"
+        />
+
+    <item android:id="@+id/setting"
+        android:title="@string/settings"
+        android:icon="@drawable/icon_setting"/>
+
+    <item android:id="@+id/about"
+        android:title="@string/about"
+        android:icon="@drawable/icon_about"/>
+
+   <item android:id="@+id/exit"
+    android:title="@string/exit"
+       android:icon="@drawable/icon_exit"/>
+
+
+</menu>
