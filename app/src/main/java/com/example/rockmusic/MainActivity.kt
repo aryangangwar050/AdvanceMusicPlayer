@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         var themeIndex:Int = 0
         val currentTheme = arrayOf(R.style.Theme_Theme01,R.style.Theme_Theme02,R.style.Theme_Theme03,R.style.Theme_Theme04,R.style.Theme_Theme05)
         val currentGradient = arrayOf(R.drawable.gradient_main,R.drawable.gradient_pink,R.drawable.gradient_black,R.drawable.gradient_light,R.drawable.gradient_green)
+        val selectioncolor = arrayOf(R.color.main_color,R.color.purple,R.color.grey,R.color.light,R.color.green)
 
     }
 

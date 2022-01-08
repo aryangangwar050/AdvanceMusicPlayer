@@ -45,7 +45,7 @@ class SongAdapter(private val context: Context, var songList:ArrayList<Song>,pri
             selectionActivity ->{
                 holder.root.setOnClickListener {
                     if(addSong(songList[position]))
-                        holder.root.setBackgroundColor(ContextCompat.getColor(context,R.color.main_color))
+                        holder.root.setBackgroundColor(ContextCompat.getColor(context,MainActivity.selectioncolor[MainActivity.themeIndex]))
                     else
                         holder.root.setBackgroundColor(ContextCompat.getColor(context,R.color.white))
                 }

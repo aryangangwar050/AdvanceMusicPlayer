@@ -30,7 +30,7 @@ class playlistDetails : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_RockMusic)
+        setTheme(MainActivity.currentTheme[MainActivity.themeIndex])
         binding = ActivityPlaylistDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].playlist = checkPlaylist(playlist =PlaylistActivity.musicPlaylist.ref[currentPlaylistPos].playlist )

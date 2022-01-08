@@ -45,6 +45,7 @@ class PlaylistAdapter(private val context: Context,private var playlistList:Arra
             val intent = Intent(context,playlistDetails::class.java)
             intent.putExtra("index",position)
             ContextCompat.startActivity(context,intent,null)
+            Log.d("TAG"," in the playlist details..")
         }
         if(PlaylistActivity.musicPlaylist.ref[position].playlist.size > 0){
             Glide.with(context)

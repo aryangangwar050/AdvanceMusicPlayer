@@ -61,9 +61,10 @@ class SettingsActivity : AppCompatActivity() {
                 .setMessage("If you want to Apply this theme than Restart  it..")
                 .setPositiveButton("Yes"){_,_ ->
 
-                    MusicPlayerActivity.musicService!!.stopForeground(true)
-                    MusicPlayerActivity.musicService!!.mediaPlayer!!.release()
-                    MusicPlayerActivity.musicService = null
+//                    MusicPlayerActivity.musicService!!.stopForeground(true)
+//                    MusicPlayerActivity.musicService!!.mediaPlayer!!.release()
+//                    MusicPlayerActivity.musicService = null
+                    exitApplication()
                     exitProcess(1)
 
                 }
