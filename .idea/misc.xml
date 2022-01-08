@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/RockMusic/app/src/main/res/drawable-v24/gradient_green.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/drawable-v24/gradient_grey.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/drawable-v24/gradient_light.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/drawable-v24/gradient_pink.xml" value="0.1" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/background_music_player.xml" value="0.2708333333333333" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/curve_style.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/drawable/gradient_black.xml" value="0.1" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.146875" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_add.xml" value="0.2708333333333333" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_add_playlist.xml" value="0.2708333333333333" />
+        <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_circle.xml" value="0.22314814814814815" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_favourite.xml" value="0.1" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_next.xml" value="0.2708333333333333" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_pause.xml" value="0.2708333333333333" />
@@ -16,18 +22,21 @@
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_previous.xml" value="0.2708333333333333" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/icon_remove.xml" value="0.2708333333333333" />
         <entry key="..\:/RockMusic/app/src/main/res/drawable/splash_scree.xml" value="0.2708333333333333" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_about.xml" value="0.2" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/activity_fav.xml" value="0.1" />
-        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_feedback.xml" value="0.25735294117647056" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/activity_music_player.xml" value="0.264" />
-        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_playlist.xml" value="0.1" />
-        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_playlist_details.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_playlist.xml" value="0.264" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_playlist_details.xml" value="0.16" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/activity_selection.xml" value="0.240625" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/activity_settings.xml" value="0.264" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/favourite_view.xml" value="0.4" />
-        <entry key="..\:/RockMusic/app/src/main/res/layout/fragment_song__now__playing.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/fragment_song__now__playing.xml" value="0.16" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/nav_header.xml" value="0.1" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/option_menus.xml" value="0.2" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/playlist_dailog.xml" value="0.264" />
-        <entry key="..\:/RockMusic/app/src/main/res/layout/playlist_view.xml" value="0.1" />
+        <entry key="..\:/RockMusic/app/src/main/res/layout/playlist_view.xml" value="0.2" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/song_view.xml" value="0.264" />
         <entry key="..\:/RockMusic/app/src/main/res/layout/timer_layout.xml" value="0.24682971014492755" />
         <entry key="..\:/RockMusic/app/src/main/res/menu/main.xml" value="0.1" />

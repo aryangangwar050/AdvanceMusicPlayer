@@ -27,6 +27,6 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:tint="@color/main_color" />
+        app:tint="?attr/themeColor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

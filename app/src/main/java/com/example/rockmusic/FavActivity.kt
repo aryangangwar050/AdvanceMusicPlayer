@@ -17,7 +17,7 @@ class FavActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_RockMusic)
+        setTheme(MainActivity.currentTheme[MainActivity.themeIndex])
         binding = ActivityFavBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        favouriteSongs = checkPlaylist(playlist = favouriteSongs)

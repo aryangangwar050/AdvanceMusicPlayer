@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/main_color"
+    android:background="?attr/themeColor"
     tools:context=".Song_Now_Playing">
 
     <com.mikhaellopez.circularimageview.CircularImageView
@@ -24,7 +24,7 @@
         android:layout_alignParentRight="true"
         app:icon="@drawable/icon_next"
         app:iconTint="@color/white"
-        android:backgroundTint="@color/main_color"
+        android:backgroundTint="?attr/themeColor"
         android:layout_centerVertical="true"
         app:iconSize="40dp"
         android:layout_marginEnd="10dp"
@@ -35,15 +35,15 @@
         android:id="@+id/playPauseBtnSNP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:icon="@drawable/icon_play"
-        app:iconTint="@color/white"
-        android:backgroundTint="@color/main_color"
         android:layout_centerVertical="true"
-        app:iconSize="40dp"
-        android:layout_toStartOf="@+id/nextBtnSNP"
-        tools:ignore="UnusedAttribute"
         android:layout_marginHorizontal="5dp"
-        android:layout_toLeftOf="@+id/nextBtnSNP" />
+        android:layout_toStartOf="@+id/nextBtnSNP"
+        android:layout_toLeftOf="@+id/nextBtnSNP"
+        android:backgroundTint="?attr/themeColor"
+        app:icon="@drawable/icon_play"
+        app:iconSize="40dp"
+        app:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/songNameSNP"

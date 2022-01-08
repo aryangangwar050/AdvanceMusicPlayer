@@ -30,8 +30,8 @@ class PlaylistAdapter(private val context: Context,private var playlistList:Arra
                 .setMessage("Do You really want to delete Playlist?")
                 .setPositiveButton("Yes"){dialog,_ ->
                     PlaylistActivity.musicPlaylist.ref.removeAt(position)
-                    refreshPlaylist()
                     dialog.dismiss()
+                    refreshPlaylist()
                 }
                 .setNegativeButton("No"){dialog,_ ->
                     dialog.dismiss()

@@ -8,11 +8,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/main_color"
+        app:boxStrokeColor="?attr/themeColor"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/icon_playlist"
-        app:startIconTint="@color/main_color"
+        app:startIconTint="?attr/themeColor"
         android:hint="@string/enter_playlist_name"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
 
@@ -34,7 +34,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/icon_playlist"
-        app:startIconTint="@color/main_color"
+        app:startIconTint="?attr/themeColor"
         android:hint="@string/user_name"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
 

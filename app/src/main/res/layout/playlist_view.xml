@@ -7,7 +7,7 @@
     android:layout_margin="5dp"
     app:cardCornerRadius="15dp"
     app:strokeWidth="2dp"
-    app:strokeColor="@color/main_color">
+    app:strokeColor="?attr/themeColor">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/playlistImage"

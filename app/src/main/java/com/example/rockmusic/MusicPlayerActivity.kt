@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.graphics.Color
+import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.audiofx.AudioEffect
 import android.net.Uri
@@ -57,7 +58,7 @@ class MusicPlayerActivity : AppCompatActivity(),ServiceConnection,MediaPlayer.On
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_RockMusic)
+        setTheme(MainActivity.currentTheme[MainActivity.themeIndex])
         binding = ActivityMusicPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initializeMusicPlayerLayout()
@@ -284,6 +285,8 @@ class MusicPlayerActivity : AppCompatActivity(),ServiceConnection,MediaPlayer.On
         musicService = binder.currentService()
         createMediaPlayer()
         musicService!!.seekBarSetup()
+        musicService!!.audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        musicService!!.audioManager.requestAudioFocus(musicService,AudioManager.STREAM_MUSIC,AudioManager.AUDIOFOCUS_GAIN)
 
     }
 
@@ -415,7 +418,4 @@ class MusicPlayerActivity : AppCompatActivity(),ServiceConnection,MediaPlayer.On
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 13 || resultCode == RESULT_OK) return
     }
-
-
-
 }

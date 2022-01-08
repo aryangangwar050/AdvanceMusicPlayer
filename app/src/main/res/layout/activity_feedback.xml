@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/faSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subject_like_error_query_suggestions_etc"
+            android:gravity="start"
+            android:layout_marginTop="20dp"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/suggestionFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:hint="@string/suggestion"
+            android:gravity="start"
+            android:layout_marginTop="20dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailOptional"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="@string/email"
+            android:gravity="center|start"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"
+            />
+        <Button
+            android:id="@+id/sendFeedbackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:background="?attr/themeColor"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+
+            />
+
+        
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

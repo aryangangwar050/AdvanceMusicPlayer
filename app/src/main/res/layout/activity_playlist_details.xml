@@ -29,7 +29,7 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             android:paddingLeft="2dp"
-            android:background="@color/main_color"
+            android:background="?attr/themeColor"
             android:singleLine="false"
             tools:ignore="RtlHardcoded,RtlSymmetry" />
 

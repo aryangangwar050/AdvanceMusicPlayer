@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -33,13 +34,19 @@ class MainActivity : AppCompatActivity() {
         lateinit var SongListMA :ArrayList<Song>
         lateinit var songListSearch: ArrayList<Song>
         var search : Boolean = false
+        var themeIndex:Int = 0
+        val currentTheme = arrayOf(R.style.Theme_Theme01,R.style.Theme_Theme02,R.style.Theme_Theme03,R.style.Theme_Theme04,R.style.Theme_Theme05)
+        val currentGradient = arrayOf(R.drawable.gradient_main,R.drawable.gradient_pink,R.drawable.gradient_black,R.drawable.gradient_light,R.drawable.gradient_green)
+
     }
 
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_RockMusic)
+        val themeEditor = getSharedPreferences("THEMES", MODE_PRIVATE)
+        themeIndex = themeEditor.getInt("themeIndex",0)
+        setTheme(currentTheme[themeIndex])
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -72,9 +79,18 @@ class MainActivity : AppCompatActivity() {
         // Handle Nav bar clicks..
        binding.navbar.setNavigationItemSelectedListener {
            when(it.itemId){
-               R.id.feedback -> Toast.makeText(this,"Click Feedback!",Toast.LENGTH_SHORT).show()
-               R.id.setting -> Toast.makeText(this,"Click setting!",Toast.LENGTH_SHORT).show()
-               R.id.about -> Toast.makeText(this,"Click about!",Toast.LENGTH_SHORT).show()
+               R.id.feedback -> {
+                   val intent = Intent(this,FeedbackActivity::class.java)
+                   startActivity(intent)
+               }
+               R.id.setting -> {
+                   val intent = Intent(this,SettingsActivity::class.java)
+                   startActivity(intent)
+               }
+               R.id.about -> {
+                   val intent = Intent(this,AboutActivity::class.java)
+                   startActivity(intent)
+               }
                R.id.exit -> {
                    val builder = MaterialAlertDialogBuilder(this)
                    builder.setTitle("Exit")
@@ -134,7 +150,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
         val menuInflater = getMenuInflater()
+        // For setting gradient in nav bar
+        findViewById<LinearLayout>(R.id.linearLayoutNav)?.setBackgroundResource(currentGradient[themeIndex])
         menuInflater.inflate(R.menu.main,menu)
         // Only to handle seach clicks!
         val searchView = menu?.findItem(R.id.navSearch)?.actionView as SearchView
@@ -156,8 +175,6 @@ class MainActivity : AppCompatActivity() {
                     menu.findItem(R.id.navplaylist).setVisible(true)
                 }
                 invalidateOptionsMenu()
-
-
                 return false
             }
 
@@ -283,6 +300,7 @@ class MainActivity : AppCompatActivity() {
         val jsonStringPlaylist = GsonBuilder().create().toJson(PlaylistActivity.musicPlaylist)
         editor.putString("MusicPlaylist",jsonStringPlaylist)
         editor.apply()
+
     }
 
 

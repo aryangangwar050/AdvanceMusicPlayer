@@ -103,7 +103,7 @@
             android:id="@+id/mpaPlayPauseBtn"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:tint="@color/white"
+            android:tint="@color/black"
             android:layout_weight="3"
             android:background="@android:color/transparent"
             android:src="@drawable/icon_pause"

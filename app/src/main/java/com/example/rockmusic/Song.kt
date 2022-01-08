@@ -59,6 +59,7 @@ fun setSongPosition(increment: Boolean){
 }
 fun exitApplication(){
     if(MusicPlayerActivity.musicService != null){
+        MusicPlayerActivity.musicService!!.audioManager.abandonAudioFocus(MusicPlayerActivity.musicService)
         MusicPlayerActivity.musicService!!.stopForeground(true)
         MusicPlayerActivity.musicService!!.mediaPlayer!!.release()
         MusicPlayerActivity.musicService = null
